@@ -10,9 +10,14 @@ export class AppComponent {
   imgUrl = 'https://picsum.photos/101';
   count = 0;
   name: string;
+  username: string;
 
   incrementCount() {
     this.count += 1;
+  }
+
+  toUpper(value) {
+    this.username = value.toUpperCase();
   }
 
 }

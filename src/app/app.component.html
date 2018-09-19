@@ -14,3 +14,8 @@
   <input type="text" [(ngModel)]="name">
   <p>Welcome {{ name }}</p>
 </div>
+
+<div>
+  <input type="text" [ngModel]="username" (ngModelChange)="toUpper($event)" > 
+  <p>Welcome {{ username }}</p>
+</div>
