@@ -1,21 +1,32 @@
 <div style="text-align:center">
   <h1>
-    {{pageTitle}}
+    Interpolation: {{pageTitle}}
   </h1>
+  <p>Propery Binding</p>
   <img [src]="imgUrl" alt="Image">
 </div>
 
 <div>
+  <h2>Event Binding</h2>
   <button (click)="incrementCount()" >Click</button>
   <p>Variabile incrementata {{count}} volte</p>
 </div>
 
 <div>
+  <h2>Two way Binding</h2>
   <input type="text" [(ngModel)]="name">
   <p>Welcome {{ name }}</p>
 </div>
 
 <div>
+   <h2>Split Two way Binding: intercept property changing during class and template interaction</h2>
   <input type="text" [ngModel]="username" (ngModelChange)="toUpper($event)" > 
   <p>Welcome {{ username }}</p>
 </div>
+
+<div>
+    <h2>Split Two way Binding with getter and setter</h2>
+    <input type="text" [(ngModel)]="role">
+    <p>Welcome {{ role }}</p>
+  </div>
+  
