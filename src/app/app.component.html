@@ -1,6 +1,16 @@
 <div style="text-align:center">
   <h1>
-    Demo Component Interaction
+    {{pageTitle}}
   </h1>
+  <img [src]="imgUrl" alt="Image">
 </div>
 
+<div>
+  <button (click)="incrementCount()" >Click</button>
+  <p>Variabile incrementata {{count}} volte</p>
+</div>
+
+<div>
+  <input type="text" [(ngModel)]="name">
+  <p>Welcome {{ name }}</p>
+</div>
