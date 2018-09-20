@@ -1,9 +1,19 @@
 <div style="text-align:center">
-  <h1>
-    Interpolation: {{pageTitle}}
-  </h1>
-  <p>Propery Binding</p>
-  <img [src]="imgUrl" alt="Image">
+  <h1>{{pageTitle}}</h1>
+</div>
+
+<div>
+  <p>How the class and it's template interact within the same component</p>
+</div>
+
+<div>
+  <h2>Interpolation</h2>
+  <p>{{pageTitle}}</p>
+</div>
+
+<div>
+    <h2>Propery Binding</h2>
+    <img [src]="imgUrl" alt="Image">
 </div>
 
 <div>
@@ -14,7 +24,7 @@
 
 <div>
   <h2>Two way Binding</h2>
-  <input type="text" [(ngModel)]="name">
+  <input #nameRef type="text" [(ngModel)]="name">
   <p>Welcome {{ name }}</p>
 </div>
 
@@ -25,8 +35,12 @@
 </div>
 
 <div>
-    <h2>Split Two way Binding with getter and setter</h2>
-    <input type="text" [(ngModel)]="role">
-    <p>Welcome {{ role }}</p>
-  </div>
-  
+  <h2>Split Two way Binding with getter and setter</h2>
+  <input type="text" [(ngModel)]="role">
+  <p>Welcome {{ role }}</p>
+</div>
+
+<div>
+  <h2>ViewChild Decorator: how access a Dom element in the template from the component class</h2>
+</div>
+
