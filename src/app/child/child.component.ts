@@ -10,13 +10,15 @@ export class ChildComponent implements OnInit {
   @Output()
   greetEvent = new EventEmitter();
 
+  name = 'Frizio';
+
   constructor() { }
 
   ngOnInit() {
   }
 
   callParentGreet() {
-    this.greetEvent.emit();
+    this.greetEvent.emit(this.name);
   }
 
 }

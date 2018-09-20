@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'My Application';
 
-  greet() {
-    alert('Hello Frizio!!!');
+  greet(name: string) {
+    alert('Hello ' + name + ' !!!');
   }
 }
