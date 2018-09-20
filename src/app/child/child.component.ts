@@ -10,7 +10,7 @@ export class ChildComponent implements OnChanges {
   @Input()
   loggedIn: boolean;
   message: string;
-
+  name = 'Frizio';
 
   constructor() { }
 
@@ -23,6 +23,10 @@ export class ChildComponent implements OnChanges {
     } else {
       this.message = 'Please log in';
     }
+  }
+
+  greetFrizio() {
+    alert('Hello Frizio!!!');
   }
 
 }

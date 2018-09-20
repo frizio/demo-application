@@ -12,5 +12,10 @@
 </div>
 
 <div>
-    <app-child [loggedIn]="userLoggedIn" ></app-child>
+    <app-child #child [loggedIn]="userLoggedIn" ></app-child>
+    <h3>Access child propery and method using Template reference variable</h3>
+    <p>Useful with nested component and forms</p>
+    <p>Instead use ViewChild() decorator to access them from code</p>
+    <p>Name: {{child.name}}</p>
+    <button (click)="child.greetFrizio()">Greet</button>
 </div>
