@@ -7,8 +7,18 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ChildComponent implements OnInit {
 
+  
+  private _loggedIn: boolean;
+
+  get loggedIn(): boolean {
+    return this._loggedIn;
+  }
+
   @Input()
-  loggedIn: boolean;
+  set loggedIn(value: boolean) {
+    // Here intercept the value change...
+    this._loggedIn = value;
+  }
 
   constructor() { }
 
