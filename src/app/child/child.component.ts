@@ -7,8 +7,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ChildComponent implements OnInit {
 
-  
   private _loggedIn: boolean;
+  message: string;
+
 
   get loggedIn(): boolean {
     return this._loggedIn;
@@ -16,8 +17,14 @@ export class ChildComponent implements OnInit {
 
   @Input()
   set loggedIn(value: boolean) {
-    // Here intercept the value change...
     this._loggedIn = value;
+    // Here intercept the value change...
+    if (value === true) {
+      this.message = 'Welcome Back';
+    } else {
+      this.message = 'Please Log in';
+    }
+
   }
 
   constructor() { }
