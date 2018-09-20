@@ -6,6 +6,11 @@
 
 <div>
   <h2>Parent Component</h2>
-  <app-child [loggedIn]="userLoggedIn" ></app-child>
+  <button (click)="userLoggedIn=true" >Login</button>
+  <button (click)="userLoggedIn=false" >Logout</button>
+  <p>userLoggedIn value: <b>{{userLoggedIn}}</b></p>
 </div>
 
+<div>
+    <app-child [loggedIn]="userLoggedIn" ></app-child>
+</div>
