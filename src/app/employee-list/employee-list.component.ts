@@ -15,7 +15,11 @@ export class EmployeeListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.employees = this._employeeService.getEmployee();
+    
+    // Subscribe to the Observable and assign the data to the local variable
+    this._employeeService.getEmployee()
+      .subscribe( data => this.employees = data );
+
   }
 
 }
