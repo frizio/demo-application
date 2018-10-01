@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -14,9 +15,16 @@ export class DepartmentListComponent implements OnInit {
     {"id": 4, "name": "Node"}
   ];
 
-  constructor() { }
+  constructor(
+    private _router: Router
+  ) { }
 
   ngOnInit() {
   }
+
+  onSelect(department) {
+    this._router.navigate(["/departments", department.id]);
+  }
+
 
 }
