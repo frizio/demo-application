@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-    {path: "", component: DepartmentListComponent},
+    {path: "", redirectTo: "/departments", pathMatch: "full"},
     {path: "departments", component: DepartmentListComponent},
     {path: "employees", component: EmployeeListComponent},
     {path: "**", component: PageNotFoundComponent}
