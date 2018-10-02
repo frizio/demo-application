@@ -27,7 +27,7 @@ export class DepartmentDetailComponent implements OnInit {
   }
 
   goBack() {
-    let id = this.departmentId + 1;
+    let id = this.departmentId - 1;
     this.router.navigate(["/departments", id]);
   }
 
